@@ -1,7 +1,7 @@
 import { ThemeProvider } from 'styled-components';
 import theme from './theme';
-import { Header, Footer } from 'src/components';
-import { AppRoutes } from 'src/routes';
+import { Header, Footer } from '@/components';
+import { AppRoutes } from '@/routes';
 
 function App() {
   return (

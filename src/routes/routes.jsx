@@ -4,7 +4,7 @@ import {
   Lp,
   Page1,
   Page2,
-} from 'src/pages';
+} from '@/pages';
 
 export function AppRoutes() {
   return (
