@@ -11,6 +11,9 @@ html {
   overflow-x: hidden;
   font-family: 'Poppins', sans-serif;
   background-color: white;
+  color: #2d2d2d;
+  font-weight: 600;
+  font-size: 14px;
 }
 
 #root {

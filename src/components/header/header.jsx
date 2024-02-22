@@ -5,6 +5,7 @@ import {
   NavBar,
   Logo,
 } from './styled';
+import logo from '@/assets/logo.png';
 
 export const Header = () => {
   return <HeaderWrapper>
@@ -15,7 +16,7 @@ export const Header = () => {
       Finalizar pedido
     </TopBar>
     <NavBar>
-      <Logo alt='logo' />
+      <img width="218" height="65" src={logo} alt='logo' />
       Printastico
     </NavBar>
   </HeaderWrapper>;
