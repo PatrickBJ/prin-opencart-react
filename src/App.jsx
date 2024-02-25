@@ -3,6 +3,7 @@ import theme from './theme';
 import { Header } from './Header';
 import { Footer } from './Footer';
 import { AppRoutes } from '@/routes';
+import "@/assets/styles/stylesheet.css";
 import "@/assets/styles/bootstrap.css";
 import "@/assets/styles/animate.css";
 import "@/assets/styles/stylesheet.css";
