@@ -1,3 +1,3 @@
-export * from './lp';
-export * from './page1';
-export * from './page2';
+export * from './Lp';
+export * from './Page1';
+export * from './Page2';

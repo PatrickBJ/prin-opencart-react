@@ -31,7 +31,7 @@ export const Header = () => (
                                 {/* Header Left */}
                                 <div className="col-sm-4" id="header-center">
                                     <div className="megamenu-background">
-                                        <div className>
+                                        <div>
                                             <div className="overflow-megamenu container">
                                                 <div id="megamenu_31648168" className="container-megamenu  horizontal">
                                                     <div className="megaMenuToggle">
@@ -72,7 +72,7 @@ export const Header = () => (
                                                                             </div>
                                                                         </div>
                                                                     </div></div></div></div></div></li>
-                                                                    <li className><p className="close-menu" /><p className="open-menu mobile-disabled" /><a href="http://opencart2.printastico.com.br/index.php?route=information/contact" className="clearfix"><span><strong>Contato</strong></span></a></li>
+                                                                    <li><p className="close-menu" /><p className="open-menu mobile-disabled" /><a href="http://opencart2.printastico.com.br/index.php?route=information/contact" className="clearfix"><span><strong>Contato</strong></span></a></li>
                                                                 </ul>
                                                             </div>
                                                         </div>

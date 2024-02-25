@@ -92,7 +92,7 @@ export const Content = () => (
                                                                                 <div className="price">
                                                                                     R$19,99	    								    						</div>
                                                                                 <div className="add-to-cart">
-                                                                                    <a onClick="cart.add('96866');">Criar Agora!</a>
+                                                                                    <a onClick={() => console.log('cart.add(96866)')}>Criar Agora!</a>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -113,7 +113,7 @@ export const Content = () => (
                                                                                     <div className="price">
                                                                                         R$19,99	    								    						</div>
                                                                                     <div className="add-to-cart">
-                                                                                        <a onClick="cart.add('96867');">Criar Agora!</a>
+                                                                                        <a onClick={() => console.log('cart.add(96867)')}>Criar Agora!</a>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -134,7 +134,7 @@ export const Content = () => (
                                                                                     <div className="price">
                                                                                         R$19,99	    								    						</div>
                                                                                     <div className="add-to-cart">
-                                                                                        <a onClick="cart.add('96868');">Criar Agora!</a>
+                                                                                        <a onClick={() => console.log('cart.add(96868)')}>Criar Agora!</a>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
