@@ -1,0 +1,39 @@
+#top .search_form {
+
+color: #00a9e7;
+
+}
+
+.header-type-3 #top .search_form:hover {
+
+color: #fff;
+
+background: #ff9807;
+
+border-color: #ff9807;
+
+}
+
+#top .logo {
+
+padding: 14px 0px 0px 0px;
+
+}
+
+.sale, #main .new {
+
+color: #ffffff  !important;
+
+background: #222 !important;
+
+}
+
+.product-info .cart .add-to-cart input {
+
+-webkit-border-radius: 0px !important;
+
+-moz-border-radius: 0px !important;
+
+border-radius: 0px !important;
+
+}
