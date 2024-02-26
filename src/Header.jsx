@@ -1,6 +1,9 @@
 import Logo from '@/assets/Logo-Header-Printastico65px.png';
 import CartIcon from '@/assets/icon-cart.png';
 import CartIconHover from '@/assets/icon-cart-hover.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch, faUser } from '@fortawesome/free-solid-svg-icons';
+
 
 export const Header = () => (
     <header className="header-type-3">
@@ -84,8 +87,13 @@ export const Header = () => (
                                 </div>
                                 {/* Header Right */}
                                 <div className="col-sm-4" id="header-right">
-                                    {/* Search */}<div className="search_form"><i className="fa fa-search" /></div>
-                                    <a href="http://opencart2.printastico.com.br/index.php?route=account/account" className="my-account"><i className="fa fa-user" /></a>
+                                    {/* Search */}
+                                    <div className="search_form">
+                                        <FontAwesomeIcon icon={faSearch} />
+                                    </div>
+                                    <a href="http://opencart2.printastico.com.br/index.php?route=account/account" className="my-account">
+                                        <FontAwesomeIcon icon={faUser} />
+                                    </a>
                                     {/* Cart block */}
                                     <div id="cart_block" className="dropdown">
                                         <div className="cart-heading dropdown-toogle" data-hover="dropdown" data-toggle="dropdown" onClick="window.location.href = 'http://opencart2.printastico.com.br/index.php?route=checkout/cart'">
