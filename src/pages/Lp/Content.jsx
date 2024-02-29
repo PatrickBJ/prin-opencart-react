@@ -8,6 +8,8 @@ import FotoLivroA4PaisagemCapaDuraFrente from '@/assets/FotoLivro-A4-Paisagem-Ca
 import CartaoVisitas from '@/assets/fotolivros-340x340.jpg';
 import Calendario from '@/assets/fotolivros-340x340.jpg';
 import Newsletter from '@/assets/newsletter.jpg';
+import { Link } from 'react-router-dom';
+
 
 export const Content = () => (
     <div className="main-content full-width home">
@@ -19,9 +21,9 @@ export const Content = () => (
                     <div className="row">
                         <div className="col-sm-12">
                             <div className="row banners banners-with-padding-30">
-                                <div className="col-sm-4"><a href="http://opencart2.printastico.com.br/#"><img src={Produto1} alt="Image" /></a></div>
-                                <div className="col-sm-4"><a href="http://opencart2.printastico.com.br/#"><img src={Produto2} alt="Image" /></a></div>
-                                <div className="col-sm-4"><a href="http://opencart2.printastico.com.br/#"><img src={Produto3} alt="Image" /></a></div>
+                                <div className="col-sm-4"><Link to="http://opencart2.printastico.com.br/#"><img src={Produto1} alt="Image" /></Link></div>
+                                <div className="col-sm-4"><Link to="http://opencart2.printastico.com.br/#"><img src={Produto2} alt="Image" /></Link></div>
+                                <div className="col-sm-4"><Link to="http://opencart2.printastico.com.br/#"><img src={Produto3} alt="Image" /></Link></div>
                             </div>
                             <div className="advanced-grid advanced-grid-38187900  " style={{ marginTop: '0px', marginBottom: '0px', width: '1519px', left: '-189.6px' }}>
                                 <div style={{ backgroundImage: `url(${Newsletter})`, backgroundPosition: 'bottom center', backgroundRepeat: 'no-repeat', backgroundAttachment: 'scroll' }}>                         <div className="container" style={{ paddingLeft: '189.6px', paddingRight: '189.6px' }}>
@@ -82,13 +84,13 @@ export const Content = () => (
                                                                             <div className="left">
                                                                                 <div className="new">Novo</div>
                                                                                 <div className="image ">
-                                                                                    <a href="http://opencart2.printastico.com.br/fotolivro">
+                                                                                    <Link to="http://opencart2.printastico.com.br/fotolivro">
                                                                                         <img src={FotoLivroA4PaisagemCapaDuraFrente} alt="FotoLivro" className />
-                                                                                    </a>
+                                                                                    </Link>
                                                                                 </div>
                                                                             </div>
                                                                             <div className="right">
-                                                                                <div className="name"><a href="http://opencart2.printastico.com.br/fotolivro">FotoLivro</a></div>
+                                                                                <div className="name"><Link to="http://opencart2.printastico.com.br/fotolivro">FotoLivro</Link></div>
                                                                                 <div className="price">
                                                                                     R$19,99	    								    						</div>
                                                                                 <div className="add-to-cart">
@@ -103,13 +105,13 @@ export const Content = () => (
                                                                                 <div className="left">
                                                                                     <div className="new">Novo</div>
                                                                                     <div className="image ">
-                                                                                        <a href="http://opencart2.printastico.com.br/cartao-de-visitas">
+                                                                                        <Link to="http://opencart2.printastico.com.br/cartao-de-visitas">
                                                                                             <img src={CartaoVisitas} alt="Cartão de Visitas" className />
-                                                                                        </a>
+                                                                                        </Link>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div className="right">
-                                                                                    <div className="name"><a href="http://opencart2.printastico.com.br/cartao-de-visitas">Cartão de Visitas</a></div>
+                                                                                    <div className="name"><Link to="http://opencart2.printastico.com.br/cartao-de-visitas">Cartão de Visitas</Link></div>
                                                                                     <div className="price">
                                                                                         R$19,99	    								    						</div>
                                                                                     <div className="add-to-cart">
@@ -124,13 +126,13 @@ export const Content = () => (
                                                                                 <div className="left">
                                                                                     <div className="new">Novo</div>
                                                                                     <div className="image ">
-                                                                                        <a href="http://opencart2.printastico.com.br/calendario">
+                                                                                        <Link to="http://opencart2.printastico.com.br/calendario">
                                                                                             <img src={Calendario} alt="Calendário" className />
-                                                                                        </a>
+                                                                                        </Link>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div className="right">
-                                                                                    <div className="name"><a href="http://opencart2.printastico.com.br/calendario">Calendário</a></div>
+                                                                                    <div className="name"><Link to="http://opencart2.printastico.com.br/calendario">Calendário</Link></div>
                                                                                     <div className="price">
                                                                                         R$19,99	    								    						</div>
                                                                                     <div className="add-to-cart">

@@ -3,6 +3,7 @@ import theme from './theme';
 import { Header } from './Header';
 import { Footer } from './Footer';
 import { AppRoutes } from '@/routes';
+import { BrowserRouter } from 'react-router-dom'; // Import BrowserRouter
 import "@/assets/styles/stylesheet.css";
 import "@/assets/styles/bootstrap.css";
 import "@/assets/styles/animate.css";
@@ -20,14 +21,16 @@ import "@/assets/styles/magnific-popup.css";
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <div className="standard-body">
-        <div id="main">
-          <Header />
-          <AppRoutes />
-          <Footer />
+      <BrowserRouter> {}
+        <div className="standard-body">
+          <div id="main">
+            <Header />
+            <AppRoutes />
+            <Footer />
+          </div>
         </div>
-      </div>
-      <div className="nav-collapse collapse" style={{ visibility: 'hidden', position: 'fixed' }} id="cwspear-is-awesome">.</div>
+        <div className="nav-collapse collapse" style={{ visibility: 'hidden', position: 'fixed' }} id="cwspear-is-awesome">.</div>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }
