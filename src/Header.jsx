@@ -2,9 +2,8 @@ import Logo from '@/assets/Logo-Header-Printastico65px.png';
 import CartIcon from '@/assets/icon-cart.png';
 import CartIconHover from '@/assets/icon-cart-hover.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faSearch, faUser, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
-
 
 export const Header = () => (
     <header className="header-type-3">
@@ -52,30 +51,40 @@ export const Header = () => (
                                                             <div className="container">
                                                                 <ul className="megamenu shift-up">
                                                                     <li className=" mobile-disabled"><p className="close-menu" /><p className="open-menu mobile-disabled" /><Link to="http://opencart2.printastico.com.br/" className="clearfix"><span><strong>&nbsp;&nbsp;&nbsp;</strong></span></Link></li>
-                                                                    <li className=" with-sub-menu hover"><p className="close-menu" /><p className="open-menu mobile-disabled" /><Link to="http://opencart2.printastico.com.br/index.php?route=product/category&path=18" className="clearfix"><span><strong>Produtos</strong></span></Link><div className="sub-menu full-width-sub-menu" style={{ width: '100%' }}><div className="content"><p className="arrow" /><div className="row"><div className="col-sm-12  mobile-disabled"><div style={{ position: 'relative', margin: '-30px -45px 0px -45px' }}>
-                                                                        <div className="furniture-collections row row-no-padding">
-                                                                            <div className="col-sm-3" style={{ background: 'url(image/catalog/furniture/collection-01.png) bottom center no-repeat' }}>
-                                                                                <Link to="http://opencart2.printastico.com.br/fotos">Fotos</Link>
-                                                                            </div>
-                                                                            <div className="col-sm-3" style={{ background: 'url(image/catalog/furniture/collection-02.png) bottom center no-repeat' }}>
-                                                                                <Link to="http://opencart2.printastico.com.br/foto-livros">FotoLivros</Link>
-                                                                            </div>
-                                                                            <div className="col-sm-3" style={{ background: 'url(image/catalog/furniture/collection-03.png) bottom center no-repeat' }}>
-                                                                                <Link to="http://opencart2.printastico.com.br/posteres">Pôsteres</Link>
-                                                                            </div>
-                                                                            <div className="col-sm-3" style={{ background: 'url(image/catalog/furniture/collection-04.png) bottom center no-repeat' }}>
-                                                                                <Link to="http://opencart2.printastico.com.br/cartoes">Cartões</Link>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div className="furniture-collections row row-no-padding">
-                                                                            <div className="col-sm-3" style={{ background: 'url(image/catalog/furniture/collection-05.png) bottom center no-repeat' }}>
-                                                                                <Link to="http://opencart2.printastico.com.br/foto-calendarios">FotoCalendários</Link>
-                                                                            </div>
-                                                                            <div className="col-sm-3">
-                                                                                <Link to="http://opencart2.printastico.com.br/index.php?route=product/category&path=20">Todos os<br /> produtos</Link>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div></div></div></div></div></li>
+                                                                    <li className=" with-sub-menu hover"><p className="close-menu" /><p className="open-menu mobile-disabled" />
+                                                                        <Link to="http://opencart2.printastico.com.br/index.php?route=product/category&path=18" className="clearfix">
+                                                                            <span>
+                                                                                <strong>Produtos</strong>
+                                                                                <FontAwesomeIcon icon={faChevronDown} color="#00a9e7" style={{ marginLeft: '12px', fontSize: '12px' }} />
+                                                                            </span>
+                                                                        </Link>
+                                                                        <div className="sub-menu full-width-sub-menu" style={{ width: '100%' }}>
+                                                                            <div className="content"><p className="arrow" />
+                                                                                <div className="row"><div className="col-sm-12  mobile-disabled">
+                                                                                    <div style={{ position: 'relative', margin: '-30px -45px 0px -45px' }}>
+                                                                                        <div className="furniture-collections row row-no-padding">
+                                                                                            <div className="col-sm-3" style={{ background: 'url(image/catalog/furniture/collection-01.png) bottom center no-repeat' }}>
+                                                                                                <Link to="http://opencart2.printastico.com.br/fotos">Fotos</Link>
+                                                                                            </div>
+                                                                                            <div className="col-sm-3" style={{ background: 'url(image/catalog/furniture/collection-02.png) bottom center no-repeat' }}>
+                                                                                                <Link to="http://opencart2.printastico.com.br/foto-livros">FotoLivros</Link>
+                                                                                            </div>
+                                                                                            <div className="col-sm-3" style={{ background: 'url(image/catalog/furniture/collection-03.png) bottom center no-repeat' }}>
+                                                                                                <Link to="http://opencart2.printastico.com.br/posteres">Pôsteres</Link>
+                                                                                            </div>
+                                                                                            <div className="col-sm-3" style={{ background: 'url(image/catalog/furniture/collection-04.png) bottom center no-repeat' }}>
+                                                                                                <Link to="http://opencart2.printastico.com.br/cartoes">Cartões</Link>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div className="furniture-collections row row-no-padding">
+                                                                                            <div className="col-sm-3" style={{ background: 'url(image/catalog/furniture/collection-05.png) bottom center no-repeat' }}>
+                                                                                                <Link to="http://opencart2.printastico.com.br/foto-calendarios">FotoCalendários</Link>
+                                                                                            </div>
+                                                                                            <div className="col-sm-3">
+                                                                                                <Link to="http://opencart2.printastico.com.br/index.php?route=product/category&path=20">Todos os<br /> produtos</Link>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div></div></div></div></div></li>
                                                                     <li><p className="close-menu" /><p className="open-menu mobile-disabled" /><Link to="http://opencart2.printastico.com.br/index.php?route=information/contact" className="clearfix"><span><strong>Contato</strong></span></Link></li>
                                                                 </ul>
                                                             </div>
@@ -100,7 +109,12 @@ export const Header = () => (
                                         <div className="cart-heading dropdown-toogle" data-hover="dropdown" data-toggle="dropdown" onClick={() => console.log("http://opencart2.printastico.com.br/index.php?route=checkout/cart'")}>
                                             <i className="cart-count"><span id="total_count_ajax">0</span></i>
                                             <i className="cart-icon"><img src={CartIconHover} className="cart-icon-hover" alt="" /><img src={CartIcon} className="cart-icon-standard" alt="" /></i>
-                                            <p><strong id="total_price_ajax"><span id="total_price">R$0,00</span></strong></p>
+                                            <p>
+                                                <strong id="total_price_ajax">
+                                                    <span id="total_price">R$0,00</span>
+                                                </strong>
+                                                <FontAwesomeIcon icon={faChevronDown} color="#00a9e7" style={{ marginLeft: '12px', fontSize: '12px' }} />
+                                            </p>
                                         </div>
                                         <div className="dropdown-menu" id="cart_content"><div id="cart_content_ajax">
                                             <div className="empty">Seu carrinho está vazio!</div>

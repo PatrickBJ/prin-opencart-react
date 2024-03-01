@@ -70,7 +70,7 @@ export const Content = () => (
                                         <div className="row">
                                             <div className="col-sm-12">
                                                 <div className="box clearfix box-with-products furniture-box">
-                                                    <div className="box-heading">Produtos em destaque</div>
+                                                    <div className="box-heading" style={{ marginBottom: '20px' }}>Produtos em destaque</div>
                                                     <div className="strip-line" />
                                                     <div className="clear" />
                                                     <div className="box-content products">

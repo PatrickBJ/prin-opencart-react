@@ -1008,22 +1008,6 @@
 				               border-left: 1px solid rgba(0, 0, 0, .1);
 				          }
 				     
-				     ul.megamenu > li.with-sub-menu > a strong:after {
-				          content: "\f078";
-				          display: inline-block;
-				          font: normal normal normal 14px/1 FontAwesome;
-				          font-size: 9px;
-				          text-rendering: auto;
-				          -webkit-font-smoothing: antialiased;
-				          -moz-osx-font-smoothing: grayscale;
-				          transition: all 0.2s ease-in-out;
-				          -webkit-transition: all 0.2s ease-in-out;
-				          -moz-transition: all 0.2s ease-in-out;
-				          color: #d9121f;
-				          vertical-align: top;
-				          margin: 5px 0px 0px 12px;
-				     }
-				     
 				          .megamenu-type-6 ul.megamenu > li.with-sub-menu > a strong:after {
 				               margin-left: 10px;
 				          }
@@ -3081,22 +3065,6 @@
                .megamenu-type-24 .standard-body .full-width .megamenu-background .mega-menu-modules > div:first-child:before {
                     height: 61px;
                }
-          
-          .megamenu-background .vertical .megamenuToogle-wrapper .container:after {
-               content: "\f078";
-               display: inline-block;
-               font: normal normal normal 14px/1 FontAwesome;
-               font-size: 9px;
-               text-rendering: auto;
-               -webkit-font-smoothing: antialiased;
-               -moz-osx-font-smoothing: grayscale;
-               transition: all 0.2s ease-in-out;
-               -webkit-transition: all 0.2s ease-in-out;
-               -moz-transition: all 0.2s ease-in-out;
-               color: #d9121f;
-               vertical-align: top;
-               margin: 5px 0px 0px 6px;
-          }
           
                .megamenu-type-10 .megamenu-background .vertical .megamenuToogle-wrapper .container:after {
                     display: none;
