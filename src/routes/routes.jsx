@@ -5,13 +5,13 @@ import {
   Page1,
   Page2,
 } from '@/pages';
+import { Empresa } from '@/pages/informations';
 
 export function AppRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<Lp />} /> {}
-      <Route path="/page1" element={<Page1 />} />
-      <Route path="/page2" element={<Page2 />} />
+      <Route path="/" element={<Lp />} />
+      <Route path="/a-empresa" element={<Empresa />} />
     </Routes>
   );
 }

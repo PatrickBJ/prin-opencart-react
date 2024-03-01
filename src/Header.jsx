@@ -30,7 +30,7 @@ export const Header = () => (
                                 {/* Header Left */}
                                 <div className="col-sm-4" id="header-left" style={{ minWidth: '273px' }}>
                                     {/* Logo */}
-                                    <div className="logo"><Link to="http://opencart2.printastico.com.br/index.php?route=common/home"><img src={Logo} title="Printástico" alt="Printástico" /></Link></div>
+                                    <div className="logo"><Link to="/"><img src={Logo} title="Printástico" alt="Printástico" /></Link></div>
                                 </div>
                                 {/* Header Left */}
                                 <div className="col-sm-4" id="header-center">
@@ -97,7 +97,7 @@ export const Header = () => (
                                     </Link>
                                     {/* Cart block */}
                                     <div id="cart_block" className="dropdown">
-                                        <div className="cart-heading dropdown-toogle" data-hover="dropdown" data-toggle="dropdown" onClick="window.location.href = 'http://opencart2.printastico.com.br/index.php?route=checkout/cart'">
+                                        <div className="cart-heading dropdown-toogle" data-hover="dropdown" data-toggle="dropdown" onClick={() => console.log("http://opencart2.printastico.com.br/index.php?route=checkout/cart'")}>
                                             <i className="cart-count"><span id="total_count_ajax">0</span></i>
                                             <i className="cart-icon"><img src={CartIconHover} className="cart-icon-hover" alt="" /><img src={CartIcon} className="cart-icon-standard" alt="" /></i>
                                             <p><strong id="total_price_ajax"><span id="total_price">R$0,00</span></strong></p>

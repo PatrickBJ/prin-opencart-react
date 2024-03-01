@@ -12379,6 +12379,10 @@ div.required .control-label:before {
   background: #fff url(../img/loader.gif) 50% 50% no-repeat;
 }
 
+#slider {
+  cursor: pointer;
+}
+
 #slider .fullwidth .camera_slider,
 #slider .fullwidth .camera_slider .camera_wrap {
   margin: 0px !important;
@@ -14280,7 +14284,7 @@ body.firefox-mac .today-deals-products .product .price .price-old {
   display: block;
   width: 16px;
   height: 16px;
-  background: url(../img/add-to-cart.png) top left no-repeat;
+  background: url(./img/add-to-cart.png) top left no-repeat;
 }
 
 /* @end */
@@ -14623,7 +14627,7 @@ body.firefox-mac .today-deals-products .product .price .price-old {
   display: block;
   top: 13px;
   left: 22px;
-  background: url(../img/add-to-cart.png) top left no-repeat;
+  background: url(./img/add-to-cart.png) top left no-repeat;
   transition: all 0.2s ease-in;
   -webkit-transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
@@ -18054,7 +18058,7 @@ body.firefox-mac .today-deals-toys2-products .price .price-old {
   display: block;
   width: 16px;
   height: 16px;
-  background: url(../img/add-to-cart.png) top left no-repeat;
+  background: url(./img/add-to-cart.png) top left no-repeat;
 }
 
 /* @end */
@@ -21902,7 +21906,7 @@ body.firefox-mac .today-deals-petshop2-products .price .price-old {
   display: block;
   width: 16px;
   height: 16px;
-  background: url(../img/add-to-cart.png) top left no-repeat;
+  background: url(./img/add-to-cart.png) top left no-repeat;
 }
 
 /* @end */
