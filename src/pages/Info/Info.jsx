@@ -2,10 +2,10 @@ import { PageHeader } from '@/components';
 import { useParams } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 
-const generateTitle = (url) => {
-  const words = url.split('-');
-  return words.map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
-};
+const generateTitle = (url) => (url.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' '));
+const generateComponentName = (url) => (
+  url.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')
+);
 
 export const Info = () => {
   const { infoType } = useParams();
@@ -13,8 +13,8 @@ export const Info = () => {
   const [Component, setComponent] = useState(() => () => <div>Loading...</div>);
 
   useEffect(() => {
-    const componentName = infoType.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('');
-    import(`./${componentName}`)
+    const componentName = generateComponentName(infoType);
+    import(/* @vite-ignore */ `./${componentName}`)
       .then(module => {
         setComponent(() => module.default);
       })
