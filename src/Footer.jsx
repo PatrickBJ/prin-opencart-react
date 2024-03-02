@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 export const Footer = () => (
     <div className="footer full-width">
-        <div className="background-footer" />
         <div className="background">
             <div className="shadow" />
             <div className="pattern" style={{ backgroundColor: 'white' }}>
@@ -32,19 +31,74 @@ export const Footer = () => (
                             <div style={{ paddingTop: '0px', paddingLeft: '0px', paddingBottom: '0px', paddingRight: '0px' }}>
                                 <div className="row">
                                     <div className="col-sm-3">
-                                        <div style={{ height: '13px' }} /><div className="strip-line" /><div className="row" style={{ clear: 'both' }}><div className="col-sm-12"><ul><li><Link to="/a-empresa">A Empresa</Link></li><li><Link to="http://opencart2.printastico.com.br/qualidade-e-tecnologia">Qualidade e Tecnologia</Link></li><li><Link to="http://opencart2.printastico.com.br/meio-ambiente">Meio Ambiente</Link></li><li><Link to="http://opencart2.printastico.com.br/privacidade-e-seguranca">Privacidade e Segurança</Link></li><li><Link to="http://opencart2.printastico.com.br/termos-de-uso">Termos de Uso</Link></li><li><Link to="http://opencart2.printastico.com.br/contato-institucional">Contato Institucional</Link></li><li><Link to="http://opencart2.printastico.com.br/international-contact">International Contact</Link></li></ul></div></div>
+                                        <div style={{ height: '13px' }} />
+                                        <div className="strip-line" />
+                                        <div className="row" style={{ clear: 'both' }}>
+                                            <div className="col-sm-12">
+                                                <ul>
+                                                    <li><Link to="/info/a-empresa">A Empresa</Link></li>
+                                                    <li><Link to="/info/qualidade-e-tecnologia">Qualidade e Tecnologia</Link></li>
+                                                    <li><Link to="/info/meio-ambiente">Meio Ambiente</Link></li>
+                                                    <li><Link to="/info/privacidade-e-seguranca">Privacidade e Segurança</Link></li>
+                                                    <li><Link to="/info/termos-de-uso">Termos de Uso</Link></li>
+                                                    <li><Link to="/info/contato-institucional">Contato Institucional</Link></li>
+                                                    <li><Link to="/info/international-contact">International Contact</Link></li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div className="col-sm-3">
-                                        <div style={{ height: '13px' }} /><div className="strip-line" /><div className="row" style={{ clear: 'both' }}><div className="col-sm-12"><ul><li><Link to="http://opencart2.printastico.com.br/v%C3%ADdeo-tutorial">Vídeo Tutorial</Link></li><li><Link to="http://opencart2.printastico.com.br/escolha-seu-produto">Escolha seu Produto</Link></li><li><Link to="http://opencart2.printastico.com.br/selecione-suas-fotos">Selecione suas Fotos</Link></li><li><Link to="http://opencart2.printastico.com.br/crie-seu-produto">Criando seu FotoProduto</Link></li><li><Link to="http://opencart2.printastico.com.br/pagamento">Pagamento</Link></li><li><Link to="http://opencart2.printastico.com.br/acompanhe-seu-pedido">Acompanhe seu Pedido</Link></li><li><Link to="http://opencart2.printastico.com.br/producao-grafica">Produção Gráfica</Link></li><li><Link to="http://opencart2.printastico.com.br/entrega-prazos-frete">Entrega, Prazos e Frete</Link></li></ul></div></div>
+                                        <div style={{ height: '13px' }} />
+                                        <div className="strip-line" />
+                                        <div className="row" style={{ clear: 'both' }}>
+                                            <div className="col-sm-12">
+                                                <ul>
+                                                    <li><Link to="/info/video-tutorial">Vídeo Tutorial</Link></li>
+                                                    <li><Link to="/info/escolha-seu-produto">Escolha seu Produto</Link></li>
+                                                    <li><Link to="/info/selecione-suas-fotos">Selecione suas Fotos</Link></li>
+                                                    <li><Link to="/info/crie-seu-produto">Criando seu FotoProduto</Link></li>
+                                                    <li><Link to="/info/pagamento">Pagamento</Link></li>
+                                                    <li><Link to="/info/acompanhe-seu-pedido">Acompanhe seu Pedido</Link></li>
+                                                    <li><Link to="/info/producao-grafica">Produção Gráfica</Link></li>
+                                                    <li><Link to="/info/entrega-prazos-frete">Entrega, Prazos e Frete</Link></li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div className="col-sm-3">
-                                        <div style={{ height: '13px' }} /><div className="strip-line" /><div className="row" style={{ clear: 'both' }}><div className="col-sm-12"><ul><li><Link to="http://opencart2.printastico.com.br/fotolivros">O que é um FotoLivro?</Link></li><li><Link to="http://opencart2.printastico.com.br/calendarios">O que é um FotoCalendário?</Link></li></ul></div></div>
+                                        <div style={{ height: '13px' }} />
+                                        <div className="strip-line" />
+                                        <div className="row" style={{ clear: 'both' }}>
+                                            <div className="col-sm-12">
+                                                <ul>
+                                                    <li><Link to="/info/fotolivros">O que é um FotoLivro?</Link></li>
+                                                    <li><Link to="/info/calendarios">O que é um FotoCalendário?</Link></li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div className="col-sm-3">
-                                        <div style={{ height: '13px' }} /><div className="strip-line" /><div className="row" style={{ clear: 'both' }}><div className="col-sm-12"><ul><li><Link to="http://opencart2.printastico.com.br/index.php?route=account/identification">Minha Conta</Link></li><li><Link to="http://opencart2.printastico.com.br/index.php?route=account/login">Histórico de Pedidos</Link></li><li><Link to="http://opencart2.printastico.com.br/index.php?route=account/login">Lista de Desejos</Link></li><li><Link to="http://opencart2.printastico.com.br/index.php?route=account/login">Newsletter</Link></li><li><Link to="http://opencart2.printastico.com.br/index.php?route=information/sitemap">Mapa do Site</Link></li><li><Link to="http://opencart2.printastico.com.br/index.php?route=information/contact">Contate-nos</Link></li></ul></div></div>
+                                        <div style={{ height: '13px' }} />
+                                        <div className="strip-line" />
+                                        <div className="row" style={{ clear: 'both' }}>
+                                            <div className="col-sm-12">
+                                                <ul>
+                                                    <li><Link to="/account/identification">Minha Conta</Link></li>
+                                                    <li><Link to="/account/login">Histórico de Pedidos</Link></li>
+                                                    <li><Link to="/account/login">Lista de Desejos</Link></li>
+                                                    <li><Link to="/account/login">Newsletter</Link></li>
+                                                    <li><Link to="/info/sitemap">Mapa do Site</Link></li>
+                                                    <li><Link to="/info/contact">Contate-nos</Link></li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div><div className="row">                                   <div className="col-sm-12">
-                                    <div style={{ paddingTop: '8px', paddingBottom: '11px' }}>Printástico - Todos os direitos reservados. <Link to="https://www.delalibera.com.br/" target="_blank">Delalibera</Link></div>                                                                                                                      </div>
+                                </div>
+                                <hr style={{ marginBottom: '7px' }} />
+                                <div className="row">
+                                    <div className="col-sm-12">
+                                        <div style={{ paddingBottom: '11px', fontSize: '13px' }}>Printástico - Todos os direitos reservados.</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -1,17 +1,31 @@
 import { PageHeader } from '@/components';
 import { useParams } from 'react-router-dom';
-import { Empresa } from './Empresa';
+import React, { useState, useEffect } from 'react';
 
-const title = {
-  'a-empresa': 'A Empresa'
+const generateTitle = (url) => {
+  const words = url.split('-');
+  return words.map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 };
 
 export const Info = () => {
   const { infoType } = useParams();
 
+  const [Component, setComponent] = useState(() => () => <div>Loading...</div>);
+
+  useEffect(() => {
+    const componentName = infoType.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('');
+    import(`./${componentName}`)
+      .then(module => {
+        setComponent(() => module.default);
+      })
+      .catch(() => {
+        setComponent(() => () => <div style={{ textAlign: 'center' }}>Page not found</div>);
+      });
+  }, [infoType]);
+
   return (
     <>
-      <PageHeader title={title[infoType]} url={`info/${infoType}`} />
+      <PageHeader title={generateTitle(infoType)} url={`info/${infoType}`} />
       <div className="main-content full-width inner-page">
         <div className="background">
           <div className="pattern">
@@ -19,7 +33,7 @@ export const Info = () => {
               <div style={{ display: 'flex', justifyContent: 'center' }}>
                 <div className="col-md-9 center-column content-with-background" id="content" style={{ padding: 0 }}>
                   <div style={{ fontSize: '13px' }}>
-                    {infoType === 'a-empresa' && <Empresa />}
+                    <Component />
                   </div>
                 </div>
               </div>

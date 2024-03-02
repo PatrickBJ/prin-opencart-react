@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { Lp, Info, Empresa } from '@/pages';
+import { Lp, Info } from '@/pages';
 
 export function AppRoutes() {
   return (
