@@ -85,7 +85,7 @@ export const Header = () => (
                                                                                             </div>
                                                                                         </div>
                                                                                     </div></div></div></div></div></li>
-                                                                    <li><p className="close-menu" /><p className="open-menu mobile-disabled" /><Link to="http://opencart2.printastico.com.br/index.php?route=information/contact" className="clearfix"><span><strong>Contato</strong></span></Link></li>
+                                                                    <li><p className="close-menu" /><p className="open-menu mobile-disabled" /><Link to="/info/contato" className="clearfix"><span><strong>Contato</strong></span></Link></li>
                                                                 </ul>
                                                             </div>
                                                         </div>

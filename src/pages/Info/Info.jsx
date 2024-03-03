@@ -11,6 +11,7 @@ const generateTitle = (url) => {
     case 'entrega-prazos-frete': return 'Entrega | Prazos | Frete';
     case 'fotolivros': return 'FotoLivros';
     case 'calendarios': return 'Calendários';
+    case 'contato': return 'Entre Em Contato';
     default: return url.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
   }
 };

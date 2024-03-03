@@ -17,7 +17,7 @@ export const Footer = () => (
                                             <div className="row">
                                                 <div className="col-sm-12 text-center">
                                                     <img src={MailIcon} alt="Mail" />
-                                                    <Link to="http://opencart2.printastico.com.br/index.php?route=information/contact" className="button">ENVIAR e-mail</Link>
+                                                    <Link to="/info/contato" className="button">ENVIAR e-mail</Link>
                                                 </div>
                                             </div>
                                         </div>                                                                                                                      </div>
@@ -83,12 +83,12 @@ export const Footer = () => (
                                         <div className="row" style={{ clear: 'both' }}>
                                             <div className="col-sm-12">
                                                 <ul>
-                                                    <li><Link to="/account/identification">Minha Conta</Link></li>
+                                                    <li><Link to="/account/login">Minha Conta</Link></li>
                                                     <li><Link to="/account/login">Histórico de Pedidos</Link></li>
                                                     <li><Link to="/account/login">Lista de Desejos</Link></li>
                                                     <li><Link to="/account/login">Newsletter</Link></li>
                                                     <li><Link to="/info/mapa-do-site">Mapa do Site</Link></li>
-                                                    <li><Link to="/info/contact">Contate-nos</Link></li>
+                                                    <li><Link to="/info/contato">Contate-nos</Link></li>
                                                 </ul>
                                             </div>
                                         </div>

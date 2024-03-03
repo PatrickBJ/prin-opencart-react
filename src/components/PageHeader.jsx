@@ -10,8 +10,11 @@ export const PageHeader = ({ title, url }) => (
           <div className="clearfix" style={{ paddingTop: '50px' }}>
             <h1 id="title-page">{title}</h1>
             <ul style={{ paddingBottom: '50px', fontSize: '13px' }}>
-              <li style={{ paddingRight: '4px' }}><Link to="/">Home</Link></li>
-              <li><Link to={url}>{title}</Link></li>
+              <li><Link to="/">Home</Link></li>
+              <li style={{ paddingLeft: '4px' }}><Link to={url}>{title}</Link></li>
+              {/* {url.split('/').map((item) => (
+                <li key={item} style={{ paddingLeft: '4px' }}><Link to={`/${item}`}>{item}</Link></li>
+              ))} */}
             </ul>
           </div>
         </div>
