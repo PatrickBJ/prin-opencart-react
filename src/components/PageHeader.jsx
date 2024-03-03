@@ -11,7 +11,7 @@ export const PageHeader = ({ title, url }) => (
             <h1 id="title-page">{title}</h1>
             <ul style={{ paddingBottom: '50px', fontSize: '13px' }}>
               <li><Link to="/">Home</Link></li>
-              <li style={{ paddingLeft: '4px' }}><Link to={url}>{title}</Link></li>
+              {url && <li style={{ paddingLeft: '4px' }}><Link to={url}>{title}</Link></li>}
               {/* {url.split('/').map((item) => (
                 <li key={item} style={{ paddingLeft: '4px' }}><Link to={`/${item}`}>{item}</Link></li>
               ))} */}

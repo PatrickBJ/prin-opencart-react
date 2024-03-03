@@ -27,10 +27,10 @@ export const Header = () => {
                             <div className="top-bar">
                                 <div className="container">
                                     <ul className="menu">
-                                        <li><Link to="http://opencart2.printastico.com.br/index.php?route=account/account">Minha conta</Link></li>
-                                        <li><Link to="http://opencart2.printastico.com.br/index.php?route=account/wishlist" id="wishlist-total">Lista de desejos (0)</Link></li>
-                                        <li><Link to="http://opencart2.printastico.com.br/index.php?route=checkout/cart">Carrinho de compras</Link></li>
-                                        <li><Link to="http://opencart2.printastico.com.br/index.php?route=checkout/checkout">Finalizar pedido</Link></li>
+                                        <li><Link to="/account/login">Minha conta</Link></li>
+                                        <li><Link to="/account/wishlist" id="wishlist-total">Lista de desejos (0)</Link></li>
+                                        <li><Link to="/checkout/cart">Carrinho de compras</Link></li>
+                                        <li><Link to="/checkout/checkout">Finalizar pedido</Link></li>
                                     </ul>
                                 </div>
                             </div>
