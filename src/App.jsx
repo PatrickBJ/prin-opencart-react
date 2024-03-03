@@ -21,14 +21,12 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
-        <div className="standard-body">
-          <div id="main">
-            <Header />
-            <AppRoutes />
-            <Footer />
-          </div>
+        <div id="main" className="standard-body">
+          <Header />
+          <AppRoutes />
+          <Footer />
+          <div className="nav-collapse collapse" style={{ visibility: 'hidden', position: 'fixed' }} id="cwspear-is-awesome">.</div>
         </div>
-        <div className="nav-collapse collapse" style={{ visibility: 'hidden', position: 'fixed' }} id="cwspear-is-awesome">.</div>
       </BrowserRouter>
     </ThemeProvider>
   );

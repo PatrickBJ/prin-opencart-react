@@ -56,7 +56,7 @@ export const Footer = () => (
                                                     <li><Link to="/info/video-tutorial">Vídeo Tutorial</Link></li>
                                                     <li><Link to="/info/escolha-seu-produto">Escolha seu Produto</Link></li>
                                                     <li><Link to="/info/selecione-suas-fotos">Selecione suas Fotos</Link></li>
-                                                    <li><Link to="/info/crie-seu-produto">Criando seu FotoProduto</Link></li>
+                                                    <li><Link to="/info/criando-seu-fotoproduto">Criando seu FotoProduto</Link></li>
                                                     <li><Link to="/info/pagamento">Pagamento</Link></li>
                                                     <li><Link to="/info/acompanhe-seu-pedido">Acompanhe seu Pedido</Link></li>
                                                     <li><Link to="/info/producao-grafica">Produção Gráfica</Link></li>
@@ -87,7 +87,7 @@ export const Footer = () => (
                                                     <li><Link to="/account/login">Histórico de Pedidos</Link></li>
                                                     <li><Link to="/account/login">Lista de Desejos</Link></li>
                                                     <li><Link to="/account/login">Newsletter</Link></li>
-                                                    <li><Link to="/info/sitemap">Mapa do Site</Link></li>
+                                                    <li><Link to="/info/mapa-do-site">Mapa do Site</Link></li>
                                                     <li><Link to="/info/contact">Contate-nos</Link></li>
                                                 </ul>
                                             </div>

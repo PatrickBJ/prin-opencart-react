@@ -2,15 +2,31 @@ import { PageHeader } from '@/components';
 import { useParams } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 
-const generateTitle = (url) => (url.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' '));
-const generateComponentName = (url) => (
-  url.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')
-);
+const generateTitle = (url) => {
+  switch (url) {
+    case 'privacidade-e-seguranca': return 'Privacidade e Segurança';
+    case 'video-tutorial': return 'Vídeo Tutorial';
+    case 'criando-seu-fotoproduto': return 'Criando seu FotoProduto';
+    case 'producao-grafica': return 'Produção Gráfica';
+    case 'entrega-prazos-frete': return 'Entrega | Prazos | Frete';
+    case 'fotolivros': return 'FotoLivros';
+    case 'calendarios': return 'Calendários';
+    default: return url.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+  }
+};
+
+const generateComponentName = (url) => {
+  switch (url) {
+    case 'criando-seu-fotoproduto': return 'CriandoSeuFotoProduto';
+    case 'fotolivros': return 'FotoLivros';
+    default: return url.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('');
+  }
+};
 
 export const Info = () => {
   const { infoType } = useParams();
 
-  const [Component, setComponent] = useState(() => () => <div>Loading...</div>);
+  const [Component, setComponent] = useState(() => () => <div>Carregando...</div>);
 
   useEffect(() => {
     const componentName = generateComponentName(infoType);
@@ -19,7 +35,7 @@ export const Info = () => {
         setComponent(() => module.default);
       })
       .catch(() => {
-        setComponent(() => () => <div style={{ textAlign: 'center' }}>Page not found</div>);
+        setComponent(() => () => <div style={{ textAlign: 'center' }}>Ops! Página não encontrada.</div>);
       });
   }, [infoType]);
 
