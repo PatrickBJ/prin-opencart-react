@@ -14406,11 +14406,10 @@ body.firefox-mac .today-deals-products .product .price .price-old {
   -moz-transition: all 0.2s ease-in;
 }
 
-.furniture-collections > div a:after {
-  content: "\f054";
+.furniture-collections > div svg {
   display: block;
   margin-top: 14px;
-  font: normal normal normal 11px/1 FontAwesome;
+  font-size: 17px;
 }
 
 .furniture-collections > div:hover a {

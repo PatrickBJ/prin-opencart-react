@@ -1384,7 +1384,6 @@
 					
 						ul.megamenu > li.active > .sub-menu {
 							z-index: 20;
-							right: auto;
 							visibility: visible;
 						}
 					
