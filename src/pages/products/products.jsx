@@ -3,12 +3,12 @@ import Fotolivros from '@/assets/fotolivros-263x263.jpg';
 import FotoLivroA4PaisagemCapaDuraFrente from '@/assets/FotoLivro-A4-Paisagem-Capa-Dura-Frente-263x263.jpg';
 import { useParams, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShoppingCart, faExchange, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown, faChevronUp, faShoppingCart, faExchange, faHeart } from '@fortawesome/free-solid-svg-icons';
 import { Tooltip } from 'react-tooltip';
 import classNames from 'classnames';
 
 export const Products = () => {
-  const { category } = useParams();
+  const { category, product } = useParams();
 
   return (
     <>
@@ -28,49 +28,93 @@ export const Products = () => {
                       <ul className="accordion" id="accordion-category">
                         <li className="panel">
                           <Link to="/produtos/fotos" className={classNames({ active: category === 'fotos' })}>Fotos</Link>
-                          {/* <span className="head"><Link style={{ float: 'right', paddingRight: '5px' }} className="accordion-toggle collapsed" data-tooltip-id="collapse" data-parent="#accordion-category" to="/produtos/#category1"><span className="plus">+</span><span className="minus">-</span></Link></span> */}
+                          <span className="head">
+                            <Link
+                              to="/produtos/fotos"
+                              style={{ float: 'right', paddingRight: '5px' }}
+                              className="accordion-toggle collapsed">
+                              <FontAwesomeIcon icon={category === 'fotos' ? faChevronUp : faChevronDown} />
+                            </Link>
+                          </span>
                           <div id="category1" className={classNames('panel-collapse', 'collapse', { in: category === 'fotos' })} style={{ clear: 'both' }}>
                             <ul>
                               <li>
-                                <Link to="/produtos/fotos/fotos-tamanho-15cm-x-10cm-a6">Tamanho 15cm X 10cm A6</Link>
+                                <Link to="/produtos/fotos/fotos-tamanho-15cm-x-10cm-a6" className={classNames({ active: product === 'fotos-tamanho-15cm-x-10cm-a6' })}>Tamanho 15cm X 10cm A6</Link>
                               </li>
                               <li>
-                                <Link to="/produtos/fotos/fotos-tamanho-15cm-x-20cm-a5">Tamanho 15cm X 20cm A5</Link>
+                                <Link to="/produtos/fotos/fotos-tamanho-15cm-x-20cm-a5" className={classNames({ active: product === 'fotos-tamanho-15cm-x-20cm-a5' })}>Tamanho 15cm X 20cm A5</Link>
                               </li>
                             </ul>
                           </div>
                         </li>
                         <li className="panel">
                           <Link to="/produtos/foto-livros" className={classNames({ active: category === 'foto-livros' })}>Foto Livros</Link>
-                          {/* <span className="head"><Link style={{ float: 'right', paddingRight: '5px' }} className="accordion-toggle" data-tooltip-id="collapse" data-parent="#accordion-category" to="/produtos/#category2"><span className="plus">+</span><span className="minus">-</span></Link></span> */}
+                          <span className="head">
+                            <Link
+                              to="/produtos/foto-livros"
+                              style={{ float: 'right', paddingRight: '5px' }}
+                              className="accordion-toggle collapsed">
+                              <FontAwesomeIcon icon={category === 'foto-livros' ? faChevronUp : faChevronDown} />
+                            </Link>
+                          </span>
                           <div id="category2" className={classNames('panel-collapse', 'collapse', { in: category === 'foto-livros' })} style={{ clear: 'both' }}>
                             <ul>
                               <li>
-                                <Link to="/produtos/foto-livros/formato-paisagem">Formato Paisagem</Link>
+                                <Link
+                                  to="/produtos/foto-livros/formato-paisagem"
+                                  className={classNames({ active: product === 'formato-paisagem' })}>
+                                  Formato Paisagem
+                                </Link>
                               </li>
                               <li>
-                                <Link to="/produtos/foto-livros/formato-retrato">Formato Retrato</Link>
+                                <Link
+                                  to="/produtos/foto-livros/formato-retrato"
+                                  className={classNames({ active: product === 'formato-retrato' })}>
+                                  Formato Retrato
+                                </Link>
                               </li>
                               <li>
-                                <Link to="/produtos/foto-livros/formato-quadrado">Formato Quadrado</Link>
+                                <Link
+                                  to="/produtos/foto-livros/formato-quadrado"
+                                  className={classNames({ active: product === 'formato-quadrado' })}>
+                                  Formato Quadrado
+                                </Link>
                               </li>
                               <li>
-                                <Link to="/produtos/foto-livros/tamanho-15cm-x-10cm-a6">Tamanho 15cm X 10cm A6</Link>
+                                <Link
+                                  className={classNames({ active: product === 'tamanho-15cm-x-10cm-a6' })}
+                                  to="/produtos/foto-livros/tamanho-15cm-x-10cm-a6">Tamanho 15cm X 10cm A6
+                                </Link>
                               </li>
                               <li>
-                                <Link to="/produtos/foto-livros/tamanho-15cm-x-20cm-a5">Tamanho 15cm X 20cm A5</Link>
+                                <Link
+                                  className={classNames({ active: product === 'tamanho-15cm-x-20cm-a5' })}
+                                  to="/produtos/foto-livros/tamanho-15cm-x-20cm-a5">Tamanho 15cm X 20cm A5
+                                </Link>
                               </li>
                               <li>
-                                <Link to="/produtos/foto-livros/foto-livros-tamanho-20cm-x-30cm-a4">Tamanho 20cm X 30cm A4</Link>
+                                <Link
+                                  className={classNames({ active: product === 'foto-livros-tamanho-20cm-x-30cm-a4' })}
+                                  to="/produtos/foto-livros/foto-livros-tamanho-20cm-x-30cm-a4">Tamanho 20cm X 30cm A4
+                                </Link>
                               </li>
                               <li>
-                                <Link to="/produtos/foto-livros/tamanho-20cm-x-20cm">Tamanho 20cm X 20cm</Link>
+                                <Link
+                                  className={classNames({ active: product === 'tamanho-20cm-x-20cm' })}
+                                  to="/produtos/foto-livros/tamanho-20cm-x-20cm">Tamanho 20cm X 20cm
+                                </Link>
                               </li>
                               <li>
-                                <Link to="/produtos/foto-livros/tamanho-30cm-x-30cm">Tamanho 30cm X 30cm</Link>
+                                <Link
+                                  className={classNames({ active: product === 'tamanho-30cm-x-30cm' })}
+                                  to="/produtos/foto-livros/tamanho-30cm-x-30cm">Tamanho 30cm X 30cm
+                                </Link>
                               </li>
                               <li>
-                                <Link to="/produtos/foto-livros/tamanho-40cm-x-40cm">Tamanho 40cm X 40cm</Link>
+                                <Link
+                                  className={classNames({ active: product === 'tamanho-40cm-x-40cm' })}
+                                  to="/produtos/foto-livros/tamanho-40cm-x-40cm">Tamanho 40cm X 40cm
+                                </Link>
                               </li>
                             </ul>
                           </div>
@@ -83,23 +127,50 @@ export const Products = () => {
                         </li>
                         <li className="panel">
                           <Link to="/produtos/foto-calendarios" className={classNames({ active: category === 'foto-calendarios' })}>Foto Calendários</Link>
-                          {/* <span className="head"><a style={{ float: 'right', paddingRight: '5px' }} className="accordion-toggle collapsed" data-tooltip-id="collapse" data-parent="#accordion-category" to="/produtos/#category5"><span className="plus">+</span><span className="minus">-</span></Link></span> */}
+                          <span className="head">
+                            <Link
+                              to="/produtos/foto-calendarios"
+                              style={{ float: 'right', paddingRight: '5px' }}
+                              className="accordion-toggle collapsed">
+                              <FontAwesomeIcon icon={category === 'foto-calendarios' ? faChevronUp : faChevronDown} />
+                            </Link>
+                          </span>
                           <div id="category5" className={classNames('panel-collapse', 'collapse', { in: category === 'foto-calendarios' })} style={{ clear: 'both' }}>
                             <ul>
                               <li>
-                                <Link to="/produtos/foto-calendarios/foto-calendario-formato-paisagem">Formato Paisagem</Link>
+                                <Link
+                                  to="/produtos/foto-calendarios/foto-calendario-formato-paisagem"
+                                  className={classNames({ active: product === 'foto-calendario-formato-paisagem' })}>
+                                  Formato Paisagem
+                                </Link>
                               </li>
                               <li>
-                                <Link to="/produtos/foto-calendarios/foto-calendario-formato-retrato">Formato Retrato</Link>
+                                <Link
+                                  to="/produtos/foto-calendarios/foto-calendario-formato-retrato"
+                                  className={classNames({ active: product === 'foto-calendario-formato-retrato' })}>
+                                  Formato Retrato
+                                </Link>
                               </li>
                               <li>
-                                <Link to="/produtos/foto-calendarios/tamanho-10cm-x-20cm-mesa">Tamanho 10cm X 20cm Mesa</Link>
+                                <Link
+                                  to="/produtos/foto-calendarios/tamanho-10cm-x-20cm-mesa"
+                                  className={classNames({ active: product === 'tamanho-10cm-x-20cm-mesa' })}>
+                                  Tamanho 10cm X 20cm Mesa
+                                </Link>
                               </li>
                               <li>
-                                <Link to="/produtos/foto-calendarios/tamanho-20cm-x-30cm-a4">Tamanho 20cm X 30cm A4</Link>
+                                <Link
+                                  to="/produtos/foto-calendarios/tamanho-20cm-x-30cm-a4"
+                                  className={classNames({ active: product === 'tamanho-20cm-x-30cm-a4' })}>
+                                  Tamanho 20cm X 30cm A4
+                                </Link>
                               </li>
                               <li>
-                                <Link to="/produtos/foto-calendarios/tamanho-30cm-x-40cm-a6">Tamanho 30cm X 40cm A6</Link>
+                                <Link
+                                  to="/produtos/foto-calendarios/tamanho-30cm-x-40cm-a6"
+                                  className={classNames({ active: product === 'tamanho-30cm-x-40cm-a6' })}>
+                                  Tamanho 30cm X 40cm A6
+                                </Link>
                               </li>
                             </ul>
                           </div>
