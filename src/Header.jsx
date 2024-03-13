@@ -68,7 +68,7 @@ export const Header = () => {
                                                                         >
                                                                             <p className="close-menu" />
                                                                             <p className="open-menu mobile-disabled" />
-                                                                            <Link to="http://opencart2.printastico.com.br/index.php?route=product/category&path=18" className="clearfix">
+                                                                            <Link to="/produtos" className="clearfix">
                                                                                 <span>
                                                                                     <strong>Produtos</strong>
                                                                                     <FontAwesomeIcon icon={faChevronDown} color="#00a9e7" style={{ marginLeft: '12px', fontSize: '12px' }} />
