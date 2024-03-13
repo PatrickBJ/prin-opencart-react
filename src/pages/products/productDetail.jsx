@@ -8,7 +8,7 @@ export const ProductDetail = () => {
 
   return (
     <>
-      <PageHeader title={product} url={`products/${category}`} />
+      <PageHeader title={product} url={`produtos/${category}`} />
     </>
   );
 };

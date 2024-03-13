@@ -65,6 +65,7 @@ export const Header = () => {
                                                                             className={`with-sub-menu hover${dropDownProductsOpen ? ' active' : ''}`}
                                                                             onMouseEnter={() => setDropDownProductsOpen(true)}
                                                                             onMouseLeave={() => setDropDownProductsOpen(false)}
+                                                                            onClick={() => setDropDownProductsOpen(false)}
                                                                         >
                                                                             <p className="close-menu" />
                                                                             <p className="open-menu mobile-disabled" />
@@ -98,7 +99,7 @@ export const Header = () => {
                                                                                                     <Link to="/produtos/foto-calendarios">FotoCalendários<FontAwesomeIcon icon={faChevronRight} /></Link>
                                                                                                 </div>
                                                                                                 <div className="col-sm-3">
-                                                                                                    <Link to="/products">Todos os<br /> produtos<FontAwesomeIcon icon={faChevronRight} /></Link>
+                                                                                                    <Link to="/produtos">Todos os<br /> produtos<FontAwesomeIcon icon={faChevronRight} /></Link>
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div></div></div></div></div></li>
@@ -127,6 +128,7 @@ export const Header = () => {
                                             className={`dropdown${dropDownCartOpen ? ' open' : ''}`}
                                             onMouseEnter={() => setDropDownCartOpen(true)}
                                             onMouseLeave={() => setDropDownCartOpen(false)}
+                                            onClick={() => setDropDownCartOpen(false)}
                                         >
                                             <div className="cart-heading dropdown-toogle" data-hover="dropdown" data-toggle="dropdown" onClick={() => console.log("http://opencart2.printastico.com.br/index.php?route=checkout/cart'")}>
                                                 <i className="cart-count"><span id="total_count_ajax">0</span></i>

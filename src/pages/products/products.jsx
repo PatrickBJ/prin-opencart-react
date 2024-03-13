@@ -12,7 +12,7 @@ export const Products = () => {
 
   return (
     <>
-      <PageHeader title="Produtos" url={'products'} />
+      <PageHeader title="Produtos" url={'/produtos'} />
       <div className="main-content full-width inner-page">
         <div className="background-content"></div>
         <div className="background">
