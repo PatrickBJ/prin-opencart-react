@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { NotFound, Lp, Info, Login } from '@/pages';
+import { NotFound, Lp, Info, Login, Products } from '@/pages';
 
 export function AppRoutes() {
   return (
@@ -9,6 +9,7 @@ export function AppRoutes() {
       <Route path="/" element={<Lp />} />
       <Route path="/info/:infoType" element={<Info />} />
       <Route path="/account/login" element={<Login />} />
+      <Route path="/produtos/:productId?" element={<Products />} />
     </Routes>
   );
 }

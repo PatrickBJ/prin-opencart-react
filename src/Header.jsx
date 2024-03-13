@@ -80,25 +80,25 @@ export const Header = () => {
                                                                                         <div style={{ position: 'relative', margin: '-30px -45px 0px -45px' }}>
                                                                                             <div className="furniture-collections row row-no-padding">
                                                                                                 <div className="col-sm-3" style={{ background: `url(${C1}) bottom center no-repeat` }}>
-                                                                                                    <Link to="http://opencart2.printastico.com.br/fotos">Fotos<FontAwesomeIcon icon={faChevronRight} />
+                                                                                                    <Link to="/produtos/fotos">Fotos<FontAwesomeIcon icon={faChevronRight} />
                                                                                                     </Link>
                                                                                                 </div>
                                                                                                 <div className="col-sm-3" style={{ background: `url(${C2}) bottom center no-repeat` }}>
-                                                                                                    <Link to="http://opencart2.printastico.com.br/foto-livros">FotoLivros<FontAwesomeIcon icon={faChevronRight} /></Link>
+                                                                                                    <Link to="/produtos/foto-livros">FotoLivros<FontAwesomeIcon icon={faChevronRight} /></Link>
                                                                                                 </div>
                                                                                                 <div className="col-sm-3" style={{ background: `url(${C3}) bottom center no-repeat` }}>
-                                                                                                    <Link to="http://opencart2.printastico.com.br/posteres">Pôsteres<FontAwesomeIcon icon={faChevronRight} /></Link>
+                                                                                                    <Link to="/produtos/posteres">Pôsteres<FontAwesomeIcon icon={faChevronRight} /></Link>
                                                                                                 </div>
                                                                                                 <div className="col-sm-3" style={{ background: `url(${C4}) bottom center no-repeat` }}>
-                                                                                                    <Link to="http://opencart2.printastico.com.br/cartoes">Cartões<FontAwesomeIcon icon={faChevronRight} /></Link>
+                                                                                                    <Link to="/produtos/cartoes">Cartões<FontAwesomeIcon icon={faChevronRight} /></Link>
                                                                                                 </div>
                                                                                             </div>
                                                                                             <div className="furniture-collections row row-no-padding">
                                                                                                 <div className="col-sm-3" style={{ background: `url(${C5}) bottom center no-repeat` }}>
-                                                                                                    <Link to="http://opencart2.printastico.com.br/foto-calendarios">FotoCalendários<FontAwesomeIcon icon={faChevronRight} /></Link>
+                                                                                                    <Link to="/produtos/foto-calendarios">FotoCalendários<FontAwesomeIcon icon={faChevronRight} /></Link>
                                                                                                 </div>
                                                                                                 <div className="col-sm-3">
-                                                                                                    <Link to="http://opencart2.printastico.com.br/index.php?route=product/category&path=20">Todos os<br /> produtos<FontAwesomeIcon icon={faChevronRight} /></Link>
+                                                                                                    <Link to="/products">Todos os<br /> produtos<FontAwesomeIcon icon={faChevronRight} /></Link>
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div></div></div></div></div></li>
