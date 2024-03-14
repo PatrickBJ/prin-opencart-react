@@ -8,6 +8,7 @@ export const generateTitle = (url) => {
     case 'fotolivros': return 'FotoLivros';
     case 'calendarios': return 'Calendários';
     case 'contato': return 'Entre Em Contato';
+    case 'cartao-de-visitas': return 'Cartão de Visitas';
     default: return url.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
   }
 };

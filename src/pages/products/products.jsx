@@ -192,13 +192,13 @@ export const Products = () => {
                               <div className="product clearfix product-hover">
                                 <div className="left">
                                   <div className="image ">
-                                    <Link to="/produtos/foto-livros/cartao-de-visitas">
+                                    <Link to="/produto/cartao-de-visitas">
                                       <img src={Fotolivros} alt="Cartão de Visitas" className="" />
                                     </Link>
                                   </div>
                                 </div>
                                 <div className="right">
-                                  <div className="name"><Link to="/produtos/foto-livros/cartao-de-visitas">Cartão de Visitas</Link></div>
+                                  <div className="name"><Link to="/produto/cartao-de-visitas">Cartão de Visitas</Link></div>
 
                                   <div className="price">R$19,99</div>
 
