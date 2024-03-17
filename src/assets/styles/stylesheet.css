@@ -7566,13 +7566,15 @@ body.firefox-mac .product-list .name-actions > .price .price-old {
   transition: all 0.2s ease-in;
   -webkit-transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
-  padding: 8px 0px 0px 12px;
   text-align: left;
   left: -9px;
   top: 50%;
   margin-top: -5px;
   font-size: 13px;
   font-family: Poppins;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .buttons-prev-next-type-2
@@ -7601,22 +7603,20 @@ body.firefox-mac .product-list .name-actions > .price .price-old {
 .product-info .thumbnails-carousel .owl-buttons .owl-next {
   right: -9px;
   left: auto;
-  padding: 8px 0px 0px 14px;
 }
 
 .product-info .thumbnails-carousel .owl-buttons .owl-next:before {
-  content: "\f054";
-  display: inline-block;
+  display: flex;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: 11px;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  align-items: center;
 }
 
 .product-info .thumbnails-carousel .owl-buttons .owl-prev:before {
-  content: "\f053";
-  display: inline-block;
+  display: flex;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: 11px;
   text-rendering: auto;

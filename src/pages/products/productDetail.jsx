@@ -1,14 +1,20 @@
 import { PageHeader } from '@/components';
-import Fotolivros520 from '@/assets/fotolivros-520x400.jpg';
-import Fotolivros100 from '@/assets/fotolivros-100x100.jpg';
 import { useParams, Link } from 'react-router-dom';
 import { generateTitle } from '@/utils';
-import './detailStyle.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { getProductDetail } from './api';
 
 export const ProductDetail = () => {
   const { category, product } = useParams();
+  const {
+    name,
+    mainImg,
+    img,
+    price,
+    description,
+    details,
+  } = getProductDetail(product);
 
   return (
     <>
@@ -28,7 +34,7 @@ export const ProductDetail = () => {
                     >
                       <div itemScope="" itemType="http://schema.org/Product">
                         <span itemProp="name" className="hidden">
-                          Cartão de Visitas
+                          {name}
                         </span>
                         <div className="product-info">
                           <div className="row">
@@ -43,9 +49,9 @@ export const ProductDetail = () => {
                                           className="open-popup-image"
                                         >
                                           <img
-                                            src={Fotolivros520}
-                                            title="Cartão de Visitas"
-                                            alt="Cartão de Visitas"
+                                            src={mainImg}
+                                            title={name}
+                                            alt={name}
                                             id="image"
                                             itemProp="image"
                                           />
@@ -79,9 +85,9 @@ export const ProductDetail = () => {
                                                     className="popup-image"
                                                   >
                                                     <img
-                                                      src={Fotolivros100}
-                                                      title="Cartão de Visitas"
-                                                      alt="Cartão de Visitas"
+                                                      src={img}
+                                                      title={name}
+                                                      alt={name}
                                                     />
                                                   </Link>
                                                 </div>
@@ -98,8 +104,12 @@ export const ProductDetail = () => {
                                               </div>
                                             </div>
                                             <div className="owl-buttons">
-                                              <FontAwesomeIcon className="owl-prev" icon={faChevronLeft} />
-                                              <FontAwesomeIcon className="owl-next" icon={faChevronRight} />
+                                              <div className="owl-prev">
+                                                <FontAwesomeIcon style={{ fontSize: '20px' }} icon={faChevronLeft} />
+                                              </div>
+                                              <div className="owl-next">
+                                                <FontAwesomeIcon style={{ fontSize: '20px' }} icon={faChevronRight} />
+                                              </div>
                                             </div>
                                           </div>
                                         </div>
@@ -108,37 +118,22 @@ export const ProductDetail = () => {
                                   </div>
                                 </div>
                                 <div className="col-sm-5 product-center clearfix">
-                                  <div
-                                    itemScope=""
-                                    itemType="http://schema.org/Offer"
-                                  >
-                                    <div className="review">
-                                      <div className="rating">
-                                        <FontAwesomeIcon icon={faStar} />
-                                        <FontAwesomeIcon icon={faStar} />
-                                        <FontAwesomeIcon icon={faStar} />
-                                        <FontAwesomeIcon icon={faStar} />
-                                        <FontAwesomeIcon icon={faStar} />
-                                        &nbsp;&nbsp;&nbsp;
-                                        {/* <Link onClick={() => { }}>
-                                          0 comentários
-                                        </Link>
-                                        &nbsp;&nbsp;|&nbsp;&nbsp;
-                                        <Link onClick={() => { }}>
-                                          Escreva um comentário
-                                        </Link> */}
-                                      </div>
+                                  <div className="review">
+                                    <div className="rating">
+                                      <FontAwesomeIcon icon={faStar} />
+                                      <FontAwesomeIcon icon={faStar} />
+                                      <FontAwesomeIcon icon={faStar} />
+                                      <FontAwesomeIcon icon={faStar} />
+                                      <FontAwesomeIcon icon={faStar} />
                                     </div>
-                                    <div className="description"></div>
-                                    <div className="price">
-                                      <span className="price-new">
-                                        <span itemProp="price" id="price-old">
-                                          R$19,99
-                                        </span>
-                                      </span>
-                                      <br />
-                                      <div className="parcelamento parcelamento-page" />
-                                    </div>
+                                  </div>
+                                  <div className="description">{description}</div>
+                                  <div className="price">
+                                    <span className="price-new">
+                                      <span itemProp="price" id="price-old">{price}</span>
+                                    </span>
+                                    <br />
+                                    <div className="parcelamento parcelamento-page" />
                                   </div>
                                   <div id="product">
                                     <div className="cart">
@@ -148,29 +143,13 @@ export const ProductDetail = () => {
                                         </p>
                                         <div className="quantity">
                                           <input
-                                            type="text"
+                                            type="number"
                                             name="quantity"
                                             id="quantity_wanted"
                                             size={2}
                                             defaultValue={1}
                                           />
-                                          <Link
-                                            id="q_up"
-                                          >
-                                            <i className="fa fa-plus" />
-                                          </Link>
-                                          <Link
-                                            id="q_down"
-                                          >
-                                            <i className="fa fa-minus" />
-                                          </Link>
                                         </div>
-                                        <input
-                                          type="hidden"
-                                          name="product_id"
-                                          size={2}
-                                          defaultValue={96867}
-                                        />
                                         <div className="shipping">
                                           <p>Frete</p>
                                           <div>
@@ -204,7 +183,7 @@ export const ProductDetail = () => {
                                           data-loading-text="Carregando..."
                                           className="button"
                                         />
-                                        <Link onClick={console.log("wishlist.add('96867')")}>
+                                        <Link onClick={() => console.log("wishlist.add('96867')")}>
                                           + Lista de Desejos
                                         </Link>
                                       </div>
@@ -222,9 +201,6 @@ export const ProductDetail = () => {
                           >
                             Detalhes
                           </Link>
-                          <Link>
-                            Comentários (0)
-                          </Link>
                         </div>
                         <div
                           id="tab-description"
@@ -232,30 +208,9 @@ export const ProductDetail = () => {
                           itemProp="description"
                           style={{ display: "block" }}
                         />
-                        <div
-                          id="tab-review"
-                          className="tab-content"
-                          style={{ display: "none" }}
-                        >
-                          <form className="form-horizontal" id="form-review">
-                            <div id="review">
-                              {" "}
-                              <p style={{ paddingBottom: 10 }}>
-                                Não há comentários para este produto.
-                              </p>
-                            </div>
-                            <h2>Escreva um comentário</h2>
-                            Você deve{" "}
-                            <Link to="/login">
-                              acessar
-                            </Link>{" "}
-                            ou{" "}
-                            <Link to="/register">
-                              cadastrar-se
-                            </Link>{" "}
-                            para comentar.{" "}
-                          </form>
-                        </div>
+                        <p style={{ paddingBottom: 10 }}>
+                          {details}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -264,7 +219,7 @@ export const ProductDetail = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div >
     </>
   );
 };

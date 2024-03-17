@@ -218,14 +218,14 @@ export const Products = () => {
                               <div className="product clearfix product-hover">
                                 <div className="left">
                                   <div className="image ">
-                                    <Link to="/produtos/foto-livros/fotolivro">
+                                    <Link to="/produto/fotolivro">
                                       <img src={FotoLivroA4PaisagemCapaDuraFrente} alt="FotoLivro" />
                                     </Link>
                                   </div>
                                 </div>
                                 <div className="right">
-                                  <div className="name"><Link to="/produtos/foto-livros/fotolivro">FotoLivro</Link></div>
-                                  <div className="price">R$19,99</div>
+                                  <div className="name"><Link to="/produtos/fotolivro">FotoLivro</Link></div>
+                                  <div className="price">R$49,99</div>
                                   <div className="only-hover">
                                     <ul>
                                       <li><a onClick={() => { console.log('cart.add(&#39;96866&#39;)'); }} data-tooltip-id="tooltip" data-tooltip-content="Criar Agora!"><FontAwesomeIcon icon={faShoppingCart} /></a></li>
