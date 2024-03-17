@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { getSliderImages } from '@/api';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -11,36 +11,36 @@ import {
 import classNames from 'classnames';
 
 export const Slider = () => {
+    const intervalRef = useRef();
     const navigate = useNavigate();
     const images = getSliderImages();
     const [currentSlide, setCurrentSlide] = useState(0);
 
     useEffect(() => {
-        const intervalId = setInterval(() => {
+        intervalRef.current = setInterval(() => {
             setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
         }, 10000);
 
-        return () => clearInterval(intervalId);
+        return () => clearInterval(intervalRef.current);
     }, [images.length]);
 
-    const prevSlideHandler = (event) => {
-        event.stopPropagation();
+    const prevSlideHandler = () => {
+        clearInterval(intervalRef.current);
         setCurrentSlide((prevSlide) => (prevSlide - 1 + images.length) % images.length);
     };
 
-    const nextSlideHandler = (event) => {
-        event.stopPropagation();
+    const nextSlideHandler = () => {
+        clearInterval(intervalRef.current);
         setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
     };
 
     return (
-        <SliderStyle
-            imageSrc={images[currentSlide]}
-            style={{ backgroundImage: `url(${images[currentSlide]})` }}
-            onClick={() => {
-                navigate('/produtos');
-            }}
-        >
+        <SliderStyle style={{ backgroundImage: `url(${images[currentSlide]})` }}>
+            <div style={{ position: 'absolute', width: '100%', height: '100%' }}
+                onClick={() => {
+                    navigate('/produtos');
+                }}
+            />
             <SlideNavigator style={{ left: '20px' }}>
                 <FontAwesomeIcon icon={faChevronLeft} onClick={prevSlideHandler} />
             </SlideNavigator>
@@ -52,8 +52,8 @@ export const Slider = () => {
                 {images.map((img, index) =>
                     <div key={img}
                         className={classNames({ active: index === currentSlide })}
-                        onClick={(event) => {
-                            event.stopPropagation();
+                        onClick={() => {
+                            clearInterval(intervalRef.current);
                             setCurrentSlide(index);
                         }}
                     />

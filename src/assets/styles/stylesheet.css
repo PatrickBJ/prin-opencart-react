@@ -14364,7 +14364,6 @@ body.firefox-mac .today-deals-products .product .price .price-old {
   left: -1px;
   position: absolute;
   width: 1px;
-  background: url(../img/bg-megamenu.png) top left repeat-y;
 }
 
 .furniture-collections > div:first-child:before {
@@ -14393,6 +14392,24 @@ body.firefox-mac .today-deals-products .product .price .price-old {
 
 .furniture-collections > div:hover a {
   padding-left: 55px;
+}
+
+.furniture-collections > div > a:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  opacity: 0;
+  color: white;
+}
+
+.furniture-collections > div:hover > a:after {
+  opacity: 1;
+  border: 100px double transparent;
+  transition: all 0.4s cubic-bezier(0.94, 0.85, 0.1, 0.62) 0s;
 }
 
 /* @end */

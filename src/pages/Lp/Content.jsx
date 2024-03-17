@@ -9,7 +9,7 @@ import CartaoVisitas from '@/assets/fotolivros-340x340.jpg';
 import Calendario from '@/assets/fotolivros-340x340.jpg';
 import Newsletter from '@/assets/newsletter.jpg';
 import { Link } from 'react-router-dom';
-
+import { BannerItem } from './styled';
 
 export const Content = () => (
     <div className="main-content full-width home">
@@ -21,9 +21,9 @@ export const Content = () => (
                     <div className="row">
                         <div className="col-sm-12">
                             <div className="row banners banners-with-padding-30">
-                                <div className="col-sm-4"><Link to="http://opencart2.printastico.com.br/#"><img src={Produto1} alt="Image" /></Link></div>
-                                <div className="col-sm-4"><Link to="http://opencart2.printastico.com.br/#"><img src={Produto2} alt="Image" /></Link></div>
-                                <div className="col-sm-4"><Link to="http://opencart2.printastico.com.br/#"><img src={Produto3} alt="Image" /></Link></div>
+                                <BannerItem className="col-sm-4"><Link to="/produto/fotoLivro"><img src={Produto1} alt="Image 1" /></Link></BannerItem>
+                                <BannerItem className="col-sm-4"><Link to="/produto/fotoCalendario"><img src={Produto2} alt="Image 2" /></Link></BannerItem>
+                                <BannerItem className="col-sm-4"><Link to="/produto/fotoCalendario"><img src={Produto3} alt="Image 3" /></Link></BannerItem>
                             </div>
                             <div className="advanced-grid advanced-grid-38187900  " style={{ marginTop: '0px', marginBottom: '0px', width: '1519px', left: '-189.6px' }}>
                                 <div style={{ backgroundImage: `url(${Newsletter})`, backgroundPosition: 'bottom center', backgroundRepeat: 'no-repeat', backgroundAttachment: 'scroll' }}>                         <div className="container" style={{ paddingLeft: '189.6px', paddingRight: '189.6px' }}>

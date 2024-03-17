@@ -45,6 +45,7 @@ export const SlideBullets = styled.div`
     bottom: 20px;
     display: flex;
     gap: 7px;
+    z-index: 10;
     div{
         width: 13px;
         border-radius: 4px;
@@ -54,6 +55,31 @@ export const SlideBullets = styled.div`
         }
         &:hover{
             background: lightgray;
+        }
+    }
+`;
+
+export const BannerItem = styled.div`
+    cursor: pointer;
+    a{
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            z-index: 1;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 0;
+            opacity: 0;
+            color: white;
+        }
+        &:hover{
+            &::after{
+                opacity: 1;
+                border: 100px double transparent;
+                transition: all 0.5s cubic-bezier(0.94, 0.85, 0.1, 0.62) 0s;
+            }
         }
     }
 `;
