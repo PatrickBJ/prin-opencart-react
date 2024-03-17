@@ -18,7 +18,7 @@ export const getProductList = (category, subcategory) => {
                 name: 'FotoLivro',
                 price: 'R$49,99',
                 img: FotoLivroA4PaisagemCapaDuraFrente,
-                detailUrl: '/produtos/fotolivro'
+                detailUrl: '/produto/fotolivro'
             }
         ];
     }
@@ -41,7 +41,7 @@ export const getProductList = (category, subcategory) => {
                 name: 'FotoLivro',
                 price: 'R$49,99',
                 img: FotoLivroA4PaisagemCapaDuraFrente,
-                detailUrl: '/produtos/fotolivro'
+                detailUrl: '/produto/fotolivro'
             }
         ];
     }

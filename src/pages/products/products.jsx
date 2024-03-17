@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp, faShoppingCart, faExchange, faHeart } from '@fortawesome/free-solid-svg-icons';
 import { Tooltip } from 'react-tooltip';
 import classNames from 'classnames';
-import { getProductList } from './api';
+import { getProductList } from '@/api';
 
 export const Products = () => {
   const { category, subcategory } = useParams();

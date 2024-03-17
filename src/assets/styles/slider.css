@@ -73,9 +73,8 @@
           padding: 8px 0px 0px 14px;
      }
      	
-     	.tp-leftarrow.default:before, 
-     	.tp-rightarrow.default:before {
-     	     content: "\f053";
+     	.tp-leftarrow.default, 
+     	.tp-rightarrow.default {
      	     display: inline-block;
      	     font: normal normal normal 14px/1 FontAwesome;
      	     font-size: 11px;
@@ -86,13 +85,8 @@
      	     -webkit-transition: all 0.2s ease-in-out;
      	     -moz-transition: all 0.2s ease-in-out;
      	}
-     	     
-     	     .tp-rightarrow.default:before {
-     	          content: "\f054";
-     	     }
-     	     
-     	     .tp-leftarrow.default:hover:before, 
-     	     .tp-rightarrow.default:hover:before {
+     	     .tp-leftarrow.default:hover, 
+     	     .tp-rightarrow.default:hover {
      	          color: #fff;
      	     }
      	     

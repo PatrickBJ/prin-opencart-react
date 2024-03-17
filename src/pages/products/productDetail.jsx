@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { generateTitle } from '@/utils';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import { getProductDetail } from './api';
+import { getProductDetail } from '@/api';
 
 export const ProductDetail = () => {
   const { category, product } = useParams();
