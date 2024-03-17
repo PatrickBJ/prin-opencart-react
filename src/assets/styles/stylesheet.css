@@ -86,22 +86,6 @@ a:hover {
   max-width: none !important;
 }
 
-body .standard-body,
-body .fixed-body {
-  overflow: hidden;
-}
-
-body .standard-body:before,
-body .fixed-body:before {
-  position: absolute;
-  z-index: -20;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  content: "";
-}
-
 .standard-body .full-width .container {
   max-width: 1230px;
   margin: 0px auto;

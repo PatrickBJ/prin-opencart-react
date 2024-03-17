@@ -9,7 +9,7 @@ export function AppRoutes() {
       <Route path="/" element={<Lp />} />
       <Route path="/info/:infoType" element={<Info />} />
       <Route path="/account/login" element={<Login />} />
-      <Route path="/produtos/:category?/:product?/" element={<Products />} />
+      <Route path="/produtos/:category?/:subcategory?/" element={<Products />} />
       <Route path="/produto/:product/" element={<ProductDetail />} />
     </Routes>
   );
